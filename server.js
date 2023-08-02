@@ -9,7 +9,10 @@ const filesFolder = './files';
 if (!fs.existsSync(filesFolder)) {
   fs.mkdirSync(filesFolder);
 }
-// API endpoint to create a text file with the current timestamp
+app.get('/', (req, res) => {
+    res.send({message:"Success",createFile:"API endpoint to create a text file with the current timestamp :/createFile ",getTextFiles:" API endpoint to retrieve all text files in the particular folder : /getTextFiles",})
+});
+
 app.get('/create', (req, res) => {
   
 
